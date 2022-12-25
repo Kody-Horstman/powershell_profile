@@ -1,11 +1,13 @@
 
 # clear ugly default color formatting
-$psstyle.FileInfo.Directory = ""
-$psstyle.FileInfo.Executable = ""
-$psstyle.FileInfo.SymbolicLink  = "" 
-$PSStyle.FileInfo.Extension.Clear()
-$PSStyle.Formatting.TableHeader = ""
-$PsStyle.Formatting.FormatAccent = ""
+if ($psstyle) {    
+    $psstyle.FileInfo.Directory = ""
+    $psstyle.FileInfo.Executable = ""
+    $psstyle.FileInfo.SymbolicLink  = "" 
+    $PSStyle.FileInfo.Extension.Clear()
+    $PSStyle.Formatting.TableHeader = ""
+    $PsStyle.Formatting.FormatAccent = ""
+}
 
 # override Prompt function
 function Prompt {
